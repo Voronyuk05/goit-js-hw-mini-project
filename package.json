@@ -1,30 +1,32 @@
 {
-  "name": "parcel-handlebars",
+  "name": "goit-js-hw-mini-project",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://IrynaSokolova-Quanandrya.github.io/parcel-handlebars",
+  "homepage": "https://github.com/Voronyuk05.github.io/goit-js-hw-mini-project",
   "scripts": {
+    "server": "json-server --watch db.json",
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-handlebars/"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-mini-project/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IrynaSokolova-Quanandrya/parcel-handlebars.git"
+    "url": "git+https://github.com/Voronyuk05/goit-js-hw-mini-project.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/IrynaSokolova-Quanandrya/parcel-handlebars/issues"
+    "url": "https://github.com/Voronyuk05/goit-js-hw-mini-project/issues"
   },
   "dependencies": {
-    "modern-normalize": "^1.1.0",
-    "parcel-transformer-hbs": "^1.0.4"
+    "json-server": "^0.17.4",
+    "modern-normalize": "^1.1.0"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
+    "parcel-transformer-hbs": "^1.0.4",
     "posthtml-include": "^1.7.4"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"

@@ -1,0 +1,286 @@
+* {
+    font-family: 'Onest';
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+    overflow-x: hidden;
+}
+
+main {
+    margin-left: 80px;
+    transition: 0.3s;
+}
+
+.moveToMain {
+    margin-left: 530px;
+}
+
+
+.createPostContainer {
+    width: 500px;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 20px;
+    position: fixed;
+    top: 0px;
+    left: -470px;
+    transition: 0.3s;
+    
+}
+
+.show-create-post-container {
+    left: 0px;
+    background-color: rgba(0,0,0,0.7);
+}
+
+form.updatePostForm {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+form.createPostForm {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+form.createCommentForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+
+.side-bar {
+    height: 100%;
+    width: 30px;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    border: none;
+}
+
+
+.side-bar-btn {
+    background-color: crimson;
+    height: 100%;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px;
+}
+
+.side-bar-btn span {
+    writing-mode: vertical-rl;
+    color: white;
+}
+
+.gradient {
+    background: linear-gradient(149deg, rgba(24,187,156,1) 0%, rgba(106,57,175,1) 42%, rgba(187,24,148,1) 72%, rgba(115,53,134,1) 100%);
+    animation: 10s infinite linear; 
+    animation-name: gradient;
+    background-size: 400% 400%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 80% 0%;
+    }
+    50% {
+        background-position: 20% 100%;
+    }
+    100% {
+        background-position: 80% 0%;
+    }
+}
+
+
+div#postsContainer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.post {
+    width: 500px;
+    height: 600px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.post .text {
+    max-height: 80%;
+}
+
+.post p {
+    max-width: 100%;
+    max-height: 90%;
+    border: 1px solid black;
+    border-radius: 7px;
+    word-wrap: break-word;
+    overflow: auto;
+    padding: 4px;
+}
+
+.post p::-webkit-scrollbar {
+    width: 6px;
+
+}
+
+.post p::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+
+}
+ 
+.post p::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+}
+
+
+.post:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.post:hover button {
+    background: linear-gradient(149deg, rgba(24,187,156,1) 0%, rgba(106,57,175,1) 42%, rgba(187,24,148,1) 72%, rgba(115,53,134,1) 100%);
+    animation: 10s infinite linear; 
+    animation-name: gradient;
+    background-size: 400% 400%;
+    color: white;
+}
+
+.post:hover .returnPostMenu {
+    color: black;
+    background: url('../images/frame-3.png');
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 0px;
+    animation: none; 
+    transform: scale(1);
+    box-shadow: none;
+    transition: 1s;
+    transform: rotate(180deg);
+}
+
+.post:hover p {
+    background-color: white;
+    color: black;
+}
+
+.post:hover .actions-container  {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+
+.actions-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: 0.3s;
+    transform: translateY(100%);
+}
+
+.actions-container button {
+    width: 30%;
+    font-size: 14px;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+
+textarea {
+    width: 100%;
+    height: 80%;
+    border-radius: 15px;
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: black;
+    border: none;
+    color: white;
+    transition: 0.3s;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(96,96,105,1);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(96,96,105,1);
+    box-shadow: 0px 0px 10px 1px rgba(96,96,105,1);
+    transform: scale(1.1);
+    
+}
+
+button, 
+button:active, 
+button:focus {
+    outline: none;
+    transition: 0.3s;
+}
+
+.returnPostMenu {
+    background: url('../images/frame-3.png');
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 0px;
+}
+
+.returnPostMenu:hover {
+    background-color: none;
+    background: url('../images/frame-3.png');
+}
+

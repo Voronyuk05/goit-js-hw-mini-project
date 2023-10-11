@@ -1,0 +1,13 @@
+{{#each this}}
+    <div class="post">
+      <div class="text">
+        <h2>{{title}}</h2>
+        <p>{{text}}</p>
+      </div>
+      <div class="actions-container">
+        <button class="editPostButton" data-id="{{id}}">Редагувати</button>
+        <button type="submit" class="addComment" id="{{id}}">Додати коментар</button>
+        <button class="deletePostButton" data-id="{{id}}">Видалити</button>
+      </div>
+    </div>
+{{/each}}
